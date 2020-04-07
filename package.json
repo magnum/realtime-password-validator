@@ -1,5 +1,5 @@
 {
-  "name": "realtimepasswordvalidator",
+  "name": "realtimePasswordValidator",
   "version": "1.0.0",
   "description": "realtime password validator",
   "main": "index.js",
