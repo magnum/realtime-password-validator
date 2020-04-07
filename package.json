@@ -1,0 +1,29 @@
+{
+  "name": "realtimepasswordvalidator",
+  "version": "1.0.0",
+  "description": "realtime password validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/magnum/realtimePasswordValidator.git"
+  },
+  "keywords": [
+    "js",
+    "jquery",
+    "validator",
+    "password",
+    "form"
+  ],
+  "author": "Antonio Molinari <molinari@incode.it>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magnum/realtimePasswordValidator/issues"
+  },
+  "homepage": "https://github.com/magnum/realtimePasswordValidator#readme",
+  "dependencies": {
+    "jquery": ">=2.0.0"
+  }
+}
