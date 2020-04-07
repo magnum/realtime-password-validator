@@ -21,19 +21,16 @@
   const $document = $(document);
 
   const p = {}; p[pluginName] = class {
-    constructor(el, settings) {
-      this.el = el;
+    constructor(element, settings) {
+      this.element = element;
       this.settings = $.extend({}, defaultSettings, settings);
-
       this._defaultSettings = defaultSettings;
-
       this.init();
     }
 
     init() {
       this.settings.input1.on("input", { self: this }, this.validateEvent);
       this.settings.input2.on("input", { self: this }, this.validateEvent);
-      console.info('realtimePasswordValidator');
     }
 
     validateEvent(event) {
@@ -52,7 +49,7 @@
         if (self.settings.input1.val().length > 0)
           $(self.element).append(message);
         if (valid) valid_count++;
-        console.log(
+        if (this.debug) console.log(
           index,
           self.settings.input1.val(),
           validator.message,
@@ -64,7 +61,7 @@
       } else {
         if (self.settings.ko) self.settings.ko(self);
       }
-      console.log("valid", valid_count, "of", self.settings.validators.length);
+      if (this.debug) console.log("valid", valid_count, "of", self.settings.validators.length);
     }
   }
 
